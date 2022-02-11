@@ -6,6 +6,8 @@ import {
   CartesianGrid,
   Tooltip,
   ResponsiveContainer,
+  YAxis,
+  Legend,
 } from "recharts";
 
 import "./chart.css";
@@ -44,8 +46,10 @@ export default class Chart extends PureComponent {
           <ResponsiveContainer width="100%" aspect={4 / 1}>
             <LineChart data={this.props.data}>
               <XAxis dataKey="name" stroke="#5550bd" />
+              <YAxis/>
               <Line type="monotone" dataKey={this.props.dataKey} />
               <Tooltip />
+              <Legend/>
               <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />
             </LineChart>
           </ResponsiveContainer>
