@@ -44,7 +44,7 @@ export default class Chart extends PureComponent {
           <ResponsiveContainer width="100%" aspect={4 / 1}>
             <LineChart data={this.props.data}>
               <XAxis dataKey="name" stroke="#5550bd" />
-              <Line type="monotone" dataKey="Active User" />
+              <Line type="monotone" dataKey={this.props.dataKey} />
               <Tooltip />
               <CartesianGrid stroke="#e0dfdf" strokeDasharray="5 5" />
             </LineChart>
